@@ -31,3 +31,5 @@ Templates are used to define a component view. A template looks like regular HTM
   
   Angular building blocks: Services
 Almost anything can be a service, any value, function, or feature that your application needs. A service is typically a class with a narrow, well-defined purpose. It should do something specific and do it well. The main purpose of Angular Services is sharing resources across components.
+
+That means we can work at a higher level using TypeScript, but compile down to the older form of Javascript that the browser needs.
