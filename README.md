@@ -25,3 +25,6 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Angular building blocks: Templates
+Templates are used to define a component view. A template looks like regular HTML, but it also has some differences. Code like *ngFor, {{hero.name}}, (click), and [hero] uses Angular template syntax to enhance HTML markup capabilities. Templates can also include custom components like <custom-element> in the form of non-regular html tags. These components mix seamlessly with native HTML in the same layouts.
