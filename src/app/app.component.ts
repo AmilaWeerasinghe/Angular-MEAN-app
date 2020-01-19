@@ -1,18 +1,28 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
+import { OktaAuthService } from "@okta/okta-angular";
 
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = "my-new-angular-app";
   public isAuthenticated: boolean;
-  constructor() {
-    this.isAuthenticated = false;
+  constructor(public oktaAuth: OktaAuthService) {
+    this.oktaAuth.$authenticationState.subscribe(
+      (isAuthenticated: boolean) => (this.isAuthenticated = isAuthenticated)
+    );
+  }
+  async ngOnInit() {
+    this.isAuthenticated = await this.oktaAuth.isAuthenticated();
   }
 
-  login() {}
+  login() {
+    this.oktaAuth.loginRedirect();
+  }
 
-  logout() {}
+  logout() {
+    this.oktaAuth.logout("/");
+  }
 }
