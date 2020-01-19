@@ -22,7 +22,7 @@ let Product = class Product {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
-    __metadata("design:type", Number)
+    __metadata("design:type", String)
 ], Product.prototype, "id", void 0);
 __decorate([
     typeorm_1.Column(),
