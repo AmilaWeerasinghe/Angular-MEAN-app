@@ -45,4 +45,4 @@ And in the client directory, run:
 
 ng serve
 
-Testing PR review
+Testing PR reviewing
