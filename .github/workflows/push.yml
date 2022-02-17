@@ -1,14 +1,14 @@
-name: Node.js CI
+name: Node.js CI on master server
 
 on:
   push:
-    branches: [main]
+    branches: [master]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 defaults:
   run:
-    working-directory: server
+    working-directory: test-ci
 
 jobs:
   build:
